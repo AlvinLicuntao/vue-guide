@@ -1,0 +1,101 @@
+@primary: #5bc0ed;
+@warn: #fde74c;
+@success: #9bc53d;
+@danger: #e55934;
+@hot: #fa7921;
+@gray: #e5e5e5;
+.color-primary{
+  color: @primary;
+}
+.color-warn{
+  color: @warn;
+}
+.color-success{
+  color: @success;
+}
+.color-danger{
+  color: @danger;
+}
+.color-hot{
+  color: @hot;
+}
+.article-item{
+  .tag{
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 3px;
+  }
+  .good,
+  .top {
+    color: white;
+    background: @success;
+  }
+  .share,
+  .job,
+  .ask{
+    color: gray;
+    background: @gray;
+  }
+  .author-name{
+    color: gray;
+    font-size: 14px;
+  }
+  .tags{
+    &>span{
+      padding: 5px;
+      border-radius: 5px;
+      margin: 0px 5px;
+      background: @primary;
+    }
+  }
+  article{
+    text-align: left;
+  }
+}
+.article-list{
+  list-style: none;
+  text-align: left;
+  .article-item{
+    height: 30px;
+    line-height: 30px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &:hover{
+      background: ghostwhite;
+    }
+    &.selected{
+      background: lighten(@primary, 20%);
+    }
+    .title, .author-name{
+      display: inline-block;
+      width: 70%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .author-name{
+      width: 20%;
+    }
+    .visit-count{
+      font-size: 12px;
+      color: #999999;
+      float: right;
+    }
+    span{
+      vertical-align: middle;
+    }
+    a{
+      vertical-align: middle;
+      text-decoration: none;
+      color: inherit;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
